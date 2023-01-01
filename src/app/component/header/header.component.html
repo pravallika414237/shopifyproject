@@ -1,0 +1,37 @@
+<header>
+    <div class="navbar bg-dark shadow-sm" style="background-color: rgb(61, 58, 58); height: 70px;">
+        <div class="navbar-brand align-item-center d-flex"  style="margin: top 10%;">
+        <i   class="fas fa-shipping-fast" style="font-size: 40px; color: rgb(248, 252, 253);">
+            </i>&nbsp;&nbsp;&nbsp;
+            <strong style="font-size: 25px; font-style: italic; color:rgb(240, 239, 231); margin-top: 10px;
+            text-decoration: none;">SHOPINGO</strong>
+            &nbsp;&nbsp; &nbsp;&nbsp;
+
+            <div class="form-group">
+            
+            <form class="example" action="/action_page.php">
+                <input type="text"  [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+          </div>
+        
+    </div>
+    <div class="align-item-center d-flex">
+
+
+     <button class="btn btn-dark" style="margin: right 10px;">
+      <a routerLink="login">  <i style="font-size: 25px; color: rgb(243, 243, 239);" class="fas fa-user" ></i>&nbsp;
+        <span style="font-size: 24px; font-family: Georgia, 'Times New Roman', Times, serif;">USER</span></a>
+    </button>
+
+    <button routerLink="cart" class="btn btn-dark"> 
+       <i style="font-size: 25px; color: rgb(239, 245, 243);" class="fas fa-cart-plus" ></i>
+      <div style="font: size 8px;" class="badge bg-danger badge-pill">{{totalItem}}</div>   
+     </button>
+
+</div>
+    </div>
+</header>
+
+<a href="mailto:shopfingo@gmail.com" ><i  class="fas fa-envelope fixed-bottom chat "  ></i>
+  

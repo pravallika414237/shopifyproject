@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="card-top navbar  " style="background-color: rgb(32, 29, 29); height: 40px;">
+    
+     <div class="container d-flex">
+        <div class="item">
+        <a (click)="filter('')" >All Products</a>
+        </div>
+        <div class="item">
+            <a (click)="filter('')" >Best Sellers</a>
+        </div>
+        <div class="item">
+            <a (click)="filter('electronics')" >Electronics</a>
+        </div>
+        <div class="item">
+            <a (click)="filter('fashion')">Fashion</a>
+        </div>
+        <div class="item">
+            <a (click)="filter('jewelery')" >Jewellery</a>
+        </div>
+     </div>
+</div>
+
+<div class="container">
+     <div class="row">
+        <ng-container *ngFor="let item of filterCategory | custompipe:searchKey:'title'">
+             <div class="card col-md-3" >
+                <a href="viewproduct/{{item.id}}" ><img src="{{item.image}}" alt=""></a>
+                  <a href="viewproduct/{{item.id}}" ><h5 style="white-space: nowrap;overflow: hidden; text-overflow: ellipsis; color: rgb(80, 24, 211);">{{item.title}}</h5></a>
+                  <p style="white-space: nowrap;overflow: hidden; text-overflow: ellipsis;">{{item.description}}</p>
+                  <p><strong style="color: red;">Price : </strong> $ {{item.price }}</p>
+                  <button class="btn btn-warning " (click)="addtocart(item)" >Add to cart</button>
+                  <button class="btn btn-primary"><a href="/viewproduct/{{item.id}}" >View Product</a></button>
+             </div>
+        </ng-container>
+     </div>
+</div>
