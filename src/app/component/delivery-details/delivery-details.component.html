@@ -8,8 +8,8 @@
         <p class="white-text">You are 30 seconds away from compleating your order!</p>
       </div>
       <div class="text-center">
-        <button type="submit" class="btn btn-white btn-rounded back-button">Go back</button>
-      </div>
+       <a href="products"> <button type="submit" class="btn btn-white btn-rounded back-button">Go back</button>
+       </a>     </div>
   
   
     </div>
@@ -25,13 +25,13 @@
             <div class="row mb-4">
               <div class="col">
                 <div class="form-outline">
-                  <input type="text" id="form9Example1" class="form-control input-custom" />
+                  <input type="text" id="form9Example1" class="form-control input-custom" required/>
                   <label class="form-label" for="form9Example1">First name</label>
                 </div>
               </div>
               <div class="col">
                 <div class="form-outline">
-                  <input type="text" id="form9Example2" class="form-control input-custom" />
+                  <input type="text" id="form9Example2" class="form-control input-custom" required/>
                   <label class="form-label" for="form9Example2">Last name</label>
                 </div>
               </div>
@@ -39,13 +39,13 @@
             <div class="row mb-4">
               <div class="col">
                 <div class="form-outline">
-                  <input type="text" id="form9Example3" class="form-control input-custom" />
+                  <input type="text" id="form9Example3" class="form-control input-custom" required />
                   <label class="form-label" for="form9Example3">City</label>
                 </div>
               </div>
               <div class="col">
                 <div class="form-outline">
-                  <input type="text" id="form9Example4" class="form-control input-custom" />
+                  <input type="text" id="form9Example4" class="form-control input-custom" required />
                   <label class="form-label" for="form9Example4">Zip</label>
                 </div>
               </div>
@@ -53,27 +53,27 @@
             <div class="row mb-4">
               <div class="col">
                 <div class="form-outline">
-                  <input type="text" id="form9Example6" class="form-control input-custom" />
+                  <input type="text" id="form9Example6" class="form-control input-custom" required/>
                   <label class="form-label" for="form9Example6">Address</label>
                 </div>
               </div>
               <div class="col">
                 <div class="form-outline">
-                  <input type="email" id="typeEmail" class="form-control input-custom" />
+                  <input type="email" id="typeEmail" class="form-control input-custom" required />
                   <label class="form-label" for="typeEmail">Email</label>
                 </div>
               </div>
             </div>
             <div class="float-end ">
               <!-- Submit button -->
-              <strong>Grand Total : $grandTotal</strong>
+              <strong>Grand Total : ${{grandTotal}}</strong>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                <input class="form-check-input" type="checkbox" id="check1" name="option1" required value="something" checked>
                 <label class="form-check-label"><strong>COD</strong></label>
               </div>
              </div>
              <div class="float-end ">
-              <button type="submit" class="btn btn-primary btn-rounded"
+              <button type="submit" class="btn btn-primary btn-rounded"(click)="order()"
                 style="background-color: #266a8b ; float: end; margin-left: 500px;">Place order</button>
             </div>
   
