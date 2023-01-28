@@ -8,7 +8,7 @@
         <p class="white-text">You are 30 seconds away from compleating your order!</p>
       </div>
       <div class="text-center">
-        <button type="submit" class="btn btn-white btn-rounded back-button">Go back</button>
+        <button routerLink="/products" type="submit" class="btn btn-white btn-rounded back-button">Go back</button>
       </div>
   
   
@@ -66,7 +66,7 @@
             </div>
             <div class="float-end ">
               <!-- Submit button -->
-              <strong>Grand Total : $grandTotal</strong>
+              <strong>Grand Total : ${{grandTotal}}</strong>
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
                 <label class="form-check-label"><strong>COD</strong></label>

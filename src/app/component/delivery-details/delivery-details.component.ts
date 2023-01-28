@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartserviceService } from 'src/app/services/cartservice.service';
 
 @Component({
   selector: 'app-delivery-details',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./delivery-details.component.css']
 })
 export class DeliveryDetailsComponent implements OnInit {
-
-  constructor() { }
+  public grandTotal !:number; 
+   constructor(private cartService: CartserviceService) { }
 
   ngOnInit(): void {
+    this.cartService.getProducts().subscribe(res=>{
+      
+      this.grandTotal=this.cartService.getTotalPrice();
+    })
   }
 
 }

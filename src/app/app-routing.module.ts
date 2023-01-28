@@ -12,8 +12,9 @@ const routes: Routes = [
   {path: 'products/cart' ,component:CartComponent},
   {path:'products/viewproduct/:pid',component:ViewProductComponent},
   {path: 'products/login' ,component:LoginComponent},
-  {path: '**' ,component:PageNotFoundComponent},
-  {path: 'products/cart/delivery', component:DeliveryDetailsComponent}
+  
+  {path: 'delivery', component:DeliveryDetailsComponent},
+  {path: '**' ,component:PageNotFoundComponent}
   
 ];
 
