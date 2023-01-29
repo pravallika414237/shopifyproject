@@ -16,5 +16,8 @@ export class DeliveryDetailsComponent implements OnInit {
       this.grandTotal=this.cartService.getTotalPrice();
     })
   }
-
+  orderPlaced(){
+    alert("order placed successfully! THANK YOU.")
+    this.cartService.removeAllCart();
+  }
 }

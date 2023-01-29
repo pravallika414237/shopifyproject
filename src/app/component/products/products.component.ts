@@ -32,6 +32,7 @@ count :number=1;
   }
 addtocart(item:any){
   this.cartService.addtoCart(item);
+  alert("product " + item.title   +"added to cart");
 }
 filter(category:string){
   this.filterCategory =this.productList.filter((a:any)=>{
